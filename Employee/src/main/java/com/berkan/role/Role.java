@@ -3,20 +3,21 @@ package com.berkan.role;
 import com.berkan.department.Department;
 
 public class Role {
-    private long roleId=0;
+    private  static int idCounter=0;
+    private long roleId;
     private String roleName;
     private int level;
     private Department department;
 
-    public Role(long roleId, String roleName, int level,Department department) {
-        this.roleId = roleId;
+    public Role( String roleName, int level,Department department) {
+        this.roleId = ++idCounter;
         this.roleName = roleName;
         this.level = level;
         this.department = department;
     }
 
     public Role(){
-        roleId+=1;
+        this.roleId = ++idCounter;
     }
 
     public long getRoleId() {
