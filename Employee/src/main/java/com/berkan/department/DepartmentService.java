@@ -5,7 +5,7 @@ import com.berkan.employee.Employee;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DepartmentService {
+public class  DepartmentService {
     private List<Employee> employeeList;
     private List<Department> departmentList;
 

@@ -7,7 +7,7 @@ public class Department {
     private double salaryFactory;
 
 
-    public Department(long departmentID, String departmentName, double salaryFactory) {
+    public Department( String departmentName, double salaryFactory) {
         this.departmentID = ++idCounter;
         this.departmentName = departmentName;
         this.salaryFactory = salaryFactory;
