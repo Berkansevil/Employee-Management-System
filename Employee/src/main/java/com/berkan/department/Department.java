@@ -1,18 +1,19 @@
 package com.berkan.department;
 
 public class Department {
-    private  long departmentID=0;
+    private static int idCounter=0;
+    private  long departmentID;
     private String departmentName;
-    private long salaryFactory;
+    private double salaryFactory;
 
 
-    public Department(long departmentID, String departmentName, long salaryFactory) {
-        this.departmentID = departmentID;
+    public Department(long departmentID, String departmentName, double salaryFactory) {
+        this.departmentID = ++idCounter;
         this.departmentName = departmentName;
         this.salaryFactory = salaryFactory;
     }
     public Department() {
-        departmentID +=1;
+        this.departmentID = ++idCounter;
     }
 
     public long getDepartmentID() {
@@ -31,11 +32,11 @@ public class Department {
         this.departmentName = departmentName;
     }
 
-    public long getSalaryFactory() {
+    public double getSalaryFactory() {
         return salaryFactory;
     }
 
-    public void setSalaryFactory(long salaryFactory) {
+    public void setSalaryFactory(double salaryFactory) {
         this.salaryFactory = salaryFactory;
     }
 }
